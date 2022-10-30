@@ -1,7 +1,11 @@
 const removeFromArray = function(arr, del) {
-    //let index = arr.indexOf(del);
-    arr.splice(del, 1)
-    console.log(arr);
+    
+    //del -= 1;
+    let index;
+    for (let i = 1; i < arguments.length; i++) {
+        index = arr.indexOf(arguments[i]);
+        arr.splice(index, 1);  
+    }
     return arr;
     };
     
